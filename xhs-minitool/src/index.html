@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>GTA8 雷奥奈达工具箱</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <!-- Top Header (automatically avoids XHS safeArea & capsule) -->
+    <header id="topHeader" class="top-header">
+      <div class="header-row">
+        <div class="brand-wrap">
+          <div class="brand-badge">G8</div>
+          <div>
+            <div class="brand-title">GTA8 <span>雷奥奈达工具箱</span></div>
+            <div class="brand-sub" id="progressSummary">已打卡 0/28 · 离线极速版</div>
+          </div>
+        </div>
+        <button type="button" id="shareBtn" class="icon-pill" aria-label="分享小工具">分享</button>
+      </div>
+    </header>
+
+    <!-- Main Scrollable Viewport -->
+    <main id="mainContent" class="main-content">
+      <!-- TAB 1: Interactive Leonida Map -->
+      <section id="panel-map" class="tab-panel is-active">
+        <div class="map-toolbar">
+          <div class="seg-group" id="basemapSwitch">
+            <button type="button" class="seg-btn is-active" data-basemap="satellite">卫星地形</button>
+            <button type="button" class="seg-btn" data-basemap="vector">霓虹路网</button>
+          </div>
+          <button type="button" id="toggleCollectedBtn" class="chip-btn">隐藏已收集</button>
+          <button type="button" id="resetMapBtn" class="chip-btn">重置视角</button>
+        </div>
+
+        <div class="cat-scroll" id="mapCatBar"></div>
+
+        <div class="map-stage" id="mapStage">
+          <canvas id="leonidaCanvas" class="map-canvas"></canvas>
+          <div class="map-zoom-controls">
+            <button type="button" id="zoomInBtn" class="zoom-btn" aria-label="放大">+</button>
+            <button type="button" id="zoomOutBtn" class="zoom-btn" aria-label="缩小">−</button>
+          </div>
+          <div class="map-hint" id="mapCoordsHud">双指/按钮缩放 · 点击标点打卡</div>
+        </div>
+
+        <!-- Selected Marker Sheet -->
+        <div id="markerCard" class="marker-card is-hidden">
+          <div class="marker-card-head">
+            <div>
+              <div class="marker-badges" id="markerBadges"></div>
+              <h3 id="markerTitle" class="marker-title"></h3>
+              <p id="markerSub" class="marker-sub"></p>
+            </div>
+            <button type="button" id="closeMarkerBtn" class="close-x" aria-label="关闭">×</button>
+          </div>
+          <p id="markerDesc" class="marker-desc"></p>
+          <div class="marker-actions">
+            <button type="button" id="toggleMarkerDoneBtn" class="primary-btn">标记为已收集</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: Controller Cheat Codes -->
+      <section id="panel-cheats" class="tab-panel">
+        <div class="section-head">
+          <h2 class="section-title">PS5 / Xbox 手柄作弊码</h2>
+          <p class="section-desc">可视化按键图标 + 游戏内手机拨号代码（免暂停直接输入）</p>
+        </div>
+
+        <div class="seg-group full-width" id="platformSwitch">
+          <button type="button" class="seg-btn is-active" data-platform="ps5">PS5 手柄</button>
+          <button type="button" class="seg-btn" data-platform="xbox">Xbox 手柄</button>
+          <button type="button" class="seg-btn" data-platform="phone">手机拨号</button>
+        </div>
+
+        <div class="cat-scroll" id="cheatCatBar"></div>
+        <div id="cheatList" class="card-stack"></div>
+      </section>
+
+      <!-- TAB 3: Vehicles, Weapons, Checklist & Heist Calc -->
+      <section id="panel-wiki" class="tab-panel">
+        <div class="seg-group full-width" id="wikiSubSwitch">
+          <button type="button" class="seg-btn is-active" data-wiki="vehicles">载具图鉴</button>
+          <button type="button" class="seg-btn" data-wiki="weapons">武器面板</button>
+          <button type="button" class="seg-btn" data-wiki="checklist">100%清单</button>
+          <button type="button" class="seg-btn" data-wiki="heist">劫案算钱</button>
+        </div>
+
+        <div id="wikiSearchWrap" class="search-box">
+          <input id="wikiSearchInput" type="search" placeholder="搜索中英载具/武器名称..." autocomplete="off">
+        </div>
+
+        <div id="wikiContainer" class="card-stack"></div>
+      </section>
+
+      <!-- TAB 4: 9:16 Mobile HD Wallpapers -->
+      <section id="panel-wallpapers" class="tab-panel">
+        <div class="section-head">
+          <h2 class="section-title">雷奥奈达 9:16 手机高清壁纸</h2>
+          <p class="section-desc">原创暗黑霓虹锁屏壁纸，点击预览锁屏时钟并一键保存至相册</p>
+        </div>
+        <div id="wallpaperGrid" class="wallpaper-grid"></div>
+      </section>
+    </main>
+
+    <!-- Bottom Tab Bar -->
+    <nav class="bottom-nav" id="bottomNav" aria-label="主导航">
+      <button type="button" class="nav-item is-active" data-tab="map">
+        <span class="nav-ico">🗺️</span>
+        <span class="nav-lbl">大地图</span>
+      </button>
+      <button type="button" class="nav-item" data-tab="cheats">
+        <span class="nav-ico">🎮</span>
+        <span class="nav-lbl">作弊码</span>
+      </button>
+      <button type="button" class="nav-item" data-tab="wiki">
+        <span class="nav-ico">🚗</span>
+        <span class="nav-lbl">图鉴工具</span>
+      </button>
+      <button type="button" class="nav-item" data-tab="wallpapers">
+        <span class="nav-ico">📱</span>
+        <span class="nav-lbl">手机壁纸</span>
+      </button>
+    </nav>
+
+    <!-- Fullscreen Lock-Screen Wallpaper Preview Modal -->
+    <div id="wpModal" class="wp-modal is-hidden">
+      <div class="wp-modal-inner">
+        <div class="wp-phone-frame">
+          <img id="wpModalImg" src="" alt="壁纸预览">
+          <div class="wp-clock-overlay" id="wpClockOverlay">
+            <div class="wp-date">11月26日 星期四</div>
+            <div class="wp-time">21:08</div>
+          </div>
+          <button type="button" id="wpModalClose" class="wp-close-btn" aria-label="关闭预览">×</button>
+        </div>
+        <div class="wp-modal-bar">
+          <div>
+            <div id="wpModalTitle" class="wp-modal-title"></div>
+            <div id="wpModalSub" class="wp-modal-sub"></div>
+          </div>
+          <div class="wp-modal-actions">
+            <button type="button" id="wpToggleClockBtn" class="chip-btn">隐藏时钟</button>
+            <button type="button" id="wpSaveBtn" class="primary-btn">保存到相册</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast is-hidden" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

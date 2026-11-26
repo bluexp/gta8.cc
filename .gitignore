@@ -22,5 +22,6 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated tiles
+# generated tiles & release zips
 /tiles-output/
+/xhs-minitool/release/*.zip
