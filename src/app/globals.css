@@ -59,8 +59,22 @@ body {
 
 /* Leaflet dark overrides for Leonida planar map */
 .leaflet-container {
-  background: #070A12 !important;
+  background: #051223 !important;
   font-family: inherit !important;
+}
+
+.leonida-region-label {
+  pointer-events: none !important;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.92), 0 0 18px rgba(5, 18, 35, 0.95);
+}
+
+/* Soft seamless edge vignette around satellite overlay so it melts into deep ocean */
+.leonida-sat-overlay {
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 84%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 84%, transparent 100%);
 }
 
 .leaflet-popup-content-wrapper,

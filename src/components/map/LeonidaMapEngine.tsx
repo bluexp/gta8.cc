@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import type { MapMarker } from "@/types/gta";
 import type { Locale } from "@/store/useLocaleStore";
-import { CATEGORY_META } from "@/lib/categories";
+import { CATEGORY_META, LEONIDA_REGIONS } from "@/lib/categories";
 import { buildLeonidaSvgDataUrl, type BasemapStyle } from "./leonidaBasemap";
 
 interface LeonidaMapEngineProps {
@@ -25,6 +25,16 @@ const WORLD_BOUNDS: L.LatLngBoundsExpression = [
   [2000, 2000],
 ];
 
+const REGION_LABEL_COLORS: Record<string, string> = {
+  "vice-beach": "#FF73B8",
+  "vice-downtown": "#38BDF8",
+  "leonida-keys": "#00E5FF",
+  grassrivers: "#4ADE80",
+  "port-gellhorn": "#FCD34D",
+  ambrosia: "#D8B4FE",
+  "mount-kalaga": "#E2E8F0",
+};
+
 interface ClusterNode {
   key: string;
   x: number;
@@ -33,10 +43,10 @@ interface ClusterNode {
 }
 
 function clusterMarkers(markers: MapMarker[], zoom: number): ClusterNode[] {
-  if (zoom > -1) {
+  if (zoom > -1.25) {
     return markers.map((m) => ({ key: m.id, x: m.x, y: m.y, items: [m] }));
   }
-  const cellSize = zoom <= -2 ? 520 : 300;
+  const cellSize = zoom <= -2 ? 480 : 280;
   const buckets = new Map<string, MapMarker[]>();
   for (const m of markers) {
     const cx = Math.floor(m.x / cellSize);
@@ -70,8 +80,9 @@ export function LeonidaMapEngine({
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const baseLayerRef = useRef<L.Layer | null>(null);
+  const labelLayerRef = useRef<L.LayerGroup | null>(null);
   const markerLayerRef = useRef<L.LayerGroup | null>(null);
-  const [zoomLevel, setZoomLevel] = useState<number>(-1);
+  const [zoomLevel, setZoomLevel] = useState<number>(-1.5);
 
   const callbacksRef = useRef({
     locale,
@@ -93,13 +104,16 @@ export function LeonidaMapEngine({
 
     const map = L.map(containerRef.current, {
       crs: L.CRS.Simple,
-      minZoom: -3,
+      minZoom: -2.5,
       maxZoom: 2,
-      zoom: -1,
-      center: [0, 350],
+      zoom: -1.5,
+      zoomSnap: 0.25,
+      zoomDelta: 0.5,
+      wheelPxPerZoomLevel: 90,
+      center: [40, 120],
       maxBounds: [
-        [-2400, -2400],
-        [2400, 2400],
+        [-2500, -2500],
+        [2500, 2500],
       ],
       maxBoundsViscosity: 0.85,
       zoomControl: false,
@@ -107,6 +121,7 @@ export function LeonidaMapEngine({
     });
 
     L.control.zoom({ position: "bottomright" }).addTo(map);
+    labelLayerRef.current = L.layerGroup().addTo(map);
     markerLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
@@ -160,10 +175,12 @@ export function LeonidaMapEngine({
       map.remove();
       mapRef.current = null;
       baseLayerRef.current = null;
+      labelLayerRef.current = null;
       markerLayerRef.current = null;
     };
   }, []);
 
+  // Switch basemap layer: R2 tiles if configured, photorealistic satellite JPG, or organic vector SVG
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -175,19 +192,59 @@ export function LeonidaMapEngine({
     const tilesBase = process.env.NEXT_PUBLIC_TILES_BASE_URL?.trim();
     if (tilesBase) {
       const tileLayer = L.tileLayer(`${tilesBase}/${basemap}/{z}/{x}/{y}.webp`, {
-        minZoom: -3,
+        minZoom: -2.5,
         maxZoom: 5,
         noWrap: true,
         bounds: WORLD_BOUNDS,
       });
       tileLayer.addTo(map);
       baseLayerRef.current = tileLayer;
+    } else if (basemap === "satellite") {
+      const overlay = L.imageOverlay("/maps/leonida-satellite.jpg", WORLD_BOUNDS, {
+        className: "leonida-sat-overlay",
+        opacity: 0.96,
+      });
+      overlay.addTo(map);
+      baseLayerRef.current = overlay;
     } else {
-      const overlay = L.imageOverlay(buildLeonidaSvgDataUrl(basemap), WORLD_BOUNDS);
+      const overlay = L.imageOverlay(buildLeonidaSvgDataUrl("vector"), WORLD_BOUNDS);
       overlay.addTo(map);
       baseLayerRef.current = overlay;
     }
   }, [basemap]);
+
+  // Crisp bilingual district watermarks that stay sharp at any zoom level
+  useEffect(() => {
+    const layer = labelLayerRef.current;
+    if (!layer) return;
+    layer.clearLayers();
+    const isEn = locale === "en";
+
+    for (const reg of LEONIDA_REGIONS) {
+      const color = REGION_LABEL_COLORS[reg.id] ?? "#E2E8F0";
+      const icon = L.divIcon({
+        className: "leonida-region-label",
+        iconSize: [160, 32],
+        iconAnchor: [80, 16],
+        html: `
+          <div style="pointer-events:none;line-height:1.15;">
+            <div style="font-size:11px;font-weight:900;letter-spacing:0.12em;color:${color};text-transform:uppercase;">
+              ${reg.en}
+            </div>
+            <div style="font-size:10px;font-weight:700;color:rgba(241,245,249,0.82);margin-top:1px;">
+              ${isEn ? "" : reg.zh}
+            </div>
+          </div>
+        `,
+      });
+      L.marker([reg.center.y, reg.center.x], {
+        icon,
+        interactive: false,
+        keyboard: false,
+        zIndexOffset: -500,
+      }).addTo(layer);
+    }
+  }, [locale]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -213,16 +270,16 @@ export function LeonidaMapEngine({
         const allDone = doneCount === node.items.length;
         const icon = L.divIcon({
           className: "",
-          iconSize: [40, 40],
-          iconAnchor: [20, 20],
+          iconSize: [38, 38],
+          iconAnchor: [19, 19],
           html: `
             <div class="gta-marker-pin ${allDone ? "is-collected" : ""}" style="
-              width:40px;height:40px;border-radius:9999px;
+              width:38px;height:38px;border-radius:9999px;
               background:radial-gradient(circle, rgba(255,46,147,0.92), rgba(22,25,34,0.95));
               border:2px solid #00E5FF;
-              box-shadow:0 0 18px rgba(0,229,255,0.45);
+              box-shadow:0 0 16px rgba(0,229,255,0.45);
               display:flex;align-items:center;justify-content:center;
-              color:#fff;font-weight:800;font-size:13px;font-family:monospace;cursor:pointer;">
+              color:#fff;font-weight:800;font-size:12px;font-family:monospace;cursor:pointer;">
               ${node.items.length}
             </div>
           `,
@@ -230,7 +287,7 @@ export function LeonidaMapEngine({
 
         const clusterPin = L.marker([node.y, node.x], { icon });
         clusterPin.on("click", () => {
-          map.flyTo([node.y, node.x], Math.min(zoomLevel + 2, 1), { duration: 0.55 });
+          map.flyTo([node.y, node.x], Math.min(zoomLevel + 1.5, 1), { duration: 0.55 });
         });
         clusterPin.addTo(layer);
       } else {
@@ -241,12 +298,12 @@ export function LeonidaMapEngine({
 
         const icon = L.divIcon({
           className: "",
-          iconSize: [32, 32],
-          iconAnchor: [16, 16],
+          iconSize: [30, 30],
+          iconAnchor: [15, 15],
           html: `
             <div class="gta-marker-pin ${isDone ? "is-collected" : ""} ${isSelected ? "is-selected" : ""}" style="
-              width:32px;height:32px;border-radius:10px;
-              background:${isSelected ? meta.color : "#161922"};
+              width:30px;height:30px;border-radius:9px;
+              background:${isSelected ? meta.color : "rgba(18,22,34,0.92)"};
               border:2px solid ${isSelected ? "#FFFFFF" : meta.color};
               box-shadow:0 0 ${isSelected ? "20px" : "10px"} ${meta.color}88;
               display:flex;align-items:center;justify-content:center;

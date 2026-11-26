@@ -83,11 +83,11 @@ export const SUBTYPE_META: Record<
 };
 
 export const LEONIDA_REGIONS = [
-  { id: "vice-beach", zh: "罪恶海滩", en: "Vice Beach", center: { x: 1250, y: 120 } },
-  { id: "vice-downtown", zh: "罪恶城中心", en: "Vice City Downtown", center: { x: 650, y: 180 } },
-  { id: "leonida-keys", zh: "雷奥奈达群岛", en: "Leonida Keys", center: { x: 820, y: -1120 } },
-  { id: "grassrivers", zh: "沼泽湿地", en: "Grassrivers", center: { x: -750, y: -680 } },
-  { id: "port-gellhorn", zh: "盖尔霍恩港", en: "Port Gellhorn", center: { x: -960, y: 580 } },
-  { id: "ambrosia", zh: "安布罗西亚", en: "Ambrosia", center: { x: 80, y: 780 } },
-  { id: "mount-kalaga", zh: "卡拉加山脉", en: "Mount Kalaga", center: { x: 180, y: 1450 } },
+  { id: "vice-beach", zh: "罪恶海滩", en: "Vice Beach", center: { x: 1560, y: 360 } },
+  { id: "vice-downtown", zh: "罪恶城中心", en: "Vice City Downtown", center: { x: 920, y: 180 } },
+  { id: "leonida-keys", zh: "雷奥奈达群岛", en: "Leonida Keys", center: { x: 960, y: -1320 } },
+  { id: "grassrivers", zh: "沼泽湿地", en: "Grassrivers", center: { x: -960, y: -780 } },
+  { id: "port-gellhorn", zh: "盖尔霍恩港", en: "Port Gellhorn", center: { x: -1080, y: 840 } },
+  { id: "ambrosia", zh: "安布罗西亚", en: "Ambrosia", center: { x: -240, y: 320 } },
+  { id: "mount-kalaga", zh: "卡拉加山脉", en: "Mount Kalaga", center: { x: -160, y: 1400 } },
 ] as const;

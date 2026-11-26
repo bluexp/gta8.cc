@@ -228,72 +228,20 @@ export function HomeClient() {
                 </span>
               </div>
 
-              <div className="relative mt-3 aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-[#080C16]">
-                <svg viewBox="0 0 400 300" className="h-full w-full">
-                  <defs>
-                    <linearGradient id="oceanGrad" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#07111F" />
-                      <stop offset="100%" stopColor="#0B192E" />
-                    </linearGradient>
-                    <linearGradient id="landGrad" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#1B2235" />
-                      <stop offset="100%" stopColor="#121826" />
-                    </linearGradient>
-                  </defs>
-                  <rect width="400" height="300" fill="url(#oceanGrad)" />
-                  <g stroke="rgba(0,229,255,0.08)" strokeWidth="1">
-                    <line x1="80" y1="0" x2="80" y2="300" />
-                    <line x1="160" y1="0" x2="160" y2="300" />
-                    <line x1="240" y1="0" x2="240" y2="300" />
-                    <line x1="320" y1="0" x2="320" y2="300" />
-                    <line x1="0" y1="75" x2="400" y2="75" />
-                    <line x1="0" y1="150" x2="400" y2="150" />
-                    <line x1="0" y1="225" x2="400" y2="225" />
-                  </g>
-                  <path
-                    d="M 65 40 L 260 32 L 312 85 L 335 165 L 315 210 L 258 212 L 220 228 L 130 225 L 70 180 L 58 105 Z"
-                    fill="url(#landGrad)"
-                    stroke="#00E5FF"
-                    strokeOpacity="0.35"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="M 295 225 Q 272 252 230 264 Q 186 272 150 266"
-                    fill="none"
-                    stroke="#FF2E93"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeDasharray="12 8"
-                    opacity="0.7"
-                  />
-                  <path
-                    d="M 95 100 Q 195 95 310 130 M 195 45 L 210 210 M 105 180 Q 200 155 305 170"
-                    fill="none"
-                    stroke="#00E5FF"
-                    strokeOpacity="0.45"
-                    strokeWidth="1.5"
-                  />
-                  <circle cx="318" cy="132" r="5" fill="#FF2E93" />
-                  <circle cx="318" cy="132" r="11" fill="#FF2E93" opacity="0.25" />
-                  <circle cx="255" cy="145" r="4.5" fill="#00E5FF" />
-                  <circle cx="275" cy="242" r="5" fill="#FF2E93" />
-                  <circle cx="115" cy="112" r="4" fill="#FFB800" />
-                  <circle cx="132" cy="195" r="4" fill="#22C55E" />
-                  <circle cx="215" cy="64" r="4" fill="#A855F7" />
-
-                  <text x="278" y="122" fill="#F8FAFC" fontSize="9" fontWeight="700">
-                    VICE BEACH
-                  </text>
-                  <text x="172" y="142" fill="#94A3B8" fontSize="8">
-                    VICE CITY
-                  </text>
-                  <text x="78" y="198" fill="#6EE7B7" fontSize="8">
-                    GRASSRIVERS
-                  </text>
-                  <text x="200" y="284" fill="#FF73B8" fontSize="8" fontWeight="700">
-                    LEONIDA KEYS
-                  </text>
-                </svg>
+              <div className="relative mt-3 aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-[#060D1A]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/maps/leonida-satellite.jpg"
+                  alt="Leonida Satellite Map Preview"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                {/* Live pulsing POI pins overlaid on real satellite map */}
+                <span className="absolute left-[76%] top-[44%] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF2E93] shadow-[0_0_12px_#FF2E93] ring-2 ring-white/80" />
+                <span className="absolute left-[64%] top-[46%] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#00E5FF] shadow-[0_0_12px_#00E5FF] ring-2 ring-white/80" />
+                <span className="absolute left-[68%] top-[76%] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF2E93] shadow-[0_0_12px_#FF2E93] ring-2 ring-white/80" />
+                <span className="absolute left-[28%] top-[36%] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFB800] shadow-[0_0_10px_#FFB800] ring-2 ring-white/80" />
+                <span className="absolute left-[33%] top-[68%] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#22C55E] shadow-[0_0_10px_#22C55E] ring-2 ring-white/80" />
+                <span className="absolute left-[54%] top-[18%] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A855F7] shadow-[0_0_10px_#A855F7] ring-2 ring-white/80" />
 
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-lg border border-white/10 bg-[#0D0F14]/90 px-3 py-2 backdrop-blur">
                   <span className="text-xs font-semibold text-white">

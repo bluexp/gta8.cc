@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { MapPin, ArrowUpRight } from "lucide-react";
 import type { MapMarker } from "@/types/gta";
-import { buildLeonidaSvgDataUrl } from "./leonidaBasemap";
 import { formatCoords } from "@/lib/utils";
 import { useLocale } from "@/store/useLocaleStore";
 
@@ -18,7 +17,6 @@ export function MiniLocatorMap({
 }: MiniLocatorMapProps) {
   const { isEn, t } = useLocale();
   const primary = markers[0];
-  const bgUrl = buildLeonidaSvgDataUrl("vector");
 
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#161922]">
@@ -37,12 +35,12 @@ export function MiniLocatorMap({
         )}
       </div>
 
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#070A12]">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#060D1A]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={bgUrl}
+          src="/maps/leonida-satellite.jpg"
           alt={t("Leonida mini locator map", "雷奥奈达迷你定位地图")}
-          className="h-full w-full object-cover opacity-90"
+          className="h-full w-full object-cover opacity-95"
         />
 
         {markers.map((m) => {
