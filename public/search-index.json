@@ -1,0 +1,664 @@
+[
+  {
+    "id": "mk-waink-01",
+    "type": "marker",
+    "titleZh": "WAiNK 扫描点 #01 · 海景霓虹酒店天台",
+    "titleEn": "WAiNK Scan #01 · Ocean View Neon Rooftop",
+    "pinyin": "zeht smd",
+    "category": "collectible",
+    "region": "罪恶海滩",
+    "href": "/gta6/map?x=1320&y=260&marker=mk-waink-01",
+    "coords": {
+      "x": 1320,
+      "y": 260
+    }
+  },
+  {
+    "id": "mk-waink-02",
+    "type": "marker",
+    "titleZh": "WAiNK 扫描点 #02 · 群岛跨海断桥观景台",
+    "titleEn": "WAiNK Scan #02 · Keys Causeway Overlook",
+    "pinyin": "landqd smd",
+    "category": "collectible",
+    "region": "雷奥奈达群岛",
+    "href": "/gta6/map?x=1240&y=-850&marker=mk-waink-02",
+    "coords": {
+      "x": 1240,
+      "y": -850
+    }
+  },
+  {
+    "id": "mk-waink-03",
+    "type": "marker",
+    "titleZh": "WAiNK 扫描点 #03 · 盖尔霍恩汽车旅馆招牌",
+    "titleEn": "WAiNK Scan #03 · Port Gellhorn Motel Sign",
+    "pinyin": "geheg smd",
+    "category": "collectible",
+    "region": "盖尔霍恩港",
+    "href": "/gta6/map?x=-1020&y=620&marker=mk-waink-03",
+    "coords": {
+      "x": -1020,
+      "y": 620
+    }
+  },
+  {
+    "id": "mk-waink-04",
+    "type": "marker",
+    "titleZh": "WAiNK 扫描点 #04 · 沼泽木屋雷达塔",
+    "titleEn": "WAiNK Scan #04 · Grassrivers Radar Shack",
+    "pinyin": "zzsd smd",
+    "category": "collectible",
+    "region": "沼泽湿地",
+    "href": "/gta6/map?x=-690&y=-740&marker=mk-waink-04",
+    "coords": {
+      "x": -690,
+      "y": -740
+    }
+  },
+  {
+    "id": "mk-stunt-01",
+    "type": "marker",
+    "titleZh": "特技飞跃 #01 · 星光岛游艇跳台",
+    "titleEn": "Stunt Jump #01 · Starfish Marina Ramp",
+    "pinyin": "zeczx tjfy",
+    "category": "collectible",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=980&y=90&marker=mk-stunt-01",
+    "coords": {
+      "x": 980,
+      "y": 90
+    }
+  },
+  {
+    "id": "mk-stunt-02",
+    "type": "marker",
+    "titleZh": "特技飞跃 #02 · 跨海高速断桥飞越",
+    "titleEn": "Stunt Jump #02 · Keys Broken Span",
+    "pinyin": "landqd tjfy",
+    "category": "collectible",
+    "region": "雷奥奈达群岛",
+    "href": "/gta6/map?x=680&y=-1160&marker=mk-stunt-02",
+    "coords": {
+      "x": 680,
+      "y": -1160
+    }
+  },
+  {
+    "id": "mk-stunt-03",
+    "type": "marker",
+    "titleZh": "特技飞跃 #03 · 安布罗西亚糖厂高架",
+    "titleEn": "Stunt Jump #03 · Ambrosia Refinery Overpass",
+    "pinyin": "ablxy tjfy",
+    "category": "collectible",
+    "region": "安布罗西亚",
+    "href": "/gta6/map?x=110&y=840&marker=mk-stunt-03",
+    "coords": {
+      "x": 110,
+      "y": 840
+    }
+  },
+  {
+    "id": "mk-pkg-01",
+    "type": "marker",
+    "titleZh": "隐藏包裹 #01 · 沉船礁防水箱",
+    "titleEn": "Hidden Package #01 · Sunken Reef Case",
+    "pinyin": "landqd ycbg",
+    "category": "collectible",
+    "region": "雷奥奈达群岛",
+    "href": "/gta6/map?x=340&y=-1380&marker=mk-pkg-01",
+    "coords": {
+      "x": 340,
+      "y": -1380
+    }
+  },
+  {
+    "id": "mk-pkg-02",
+    "type": "marker",
+    "titleZh": "隐藏包裹 #02 · 卡拉加护林哨塔",
+    "titleEn": "Hidden Package #02 · Kalaga Fire Tower",
+    "pinyin": "kljsm ycbg klj",
+    "category": "collectible",
+    "region": "卡拉加山脉",
+    "href": "/gta6/map?x=240&y=1520&marker=mk-pkg-02",
+    "coords": {
+      "x": 240,
+      "y": 1520
+    }
+  },
+  {
+    "id": "mk-mag-01",
+    "type": "marker",
+    "titleZh": "霓虹杂志 #01 · 罪恶之夜创刊号",
+    "titleEn": "Neon Magazine #01 · Vice Nights Issue #1",
+    "pinyin": "zeht nhzz",
+    "category": "collectible",
+    "region": "罪恶海滩",
+    "href": "/gta6/map?x=1385&y=-40&marker=mk-mag-01",
+    "coords": {
+      "x": 1385,
+      "y": -40
+    }
+  },
+  {
+    "id": "mk-mag-02",
+    "type": "marker",
+    "titleZh": "霓虹杂志 #02 · 街头漂移特刊",
+    "titleEn": "Neon Magazine #02 · Street Drift Special",
+    "pinyin": "zeczx nhzz",
+    "category": "collectible",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=540&y=310&marker=mk-mag-02",
+    "coords": {
+      "x": 540,
+      "y": 310
+    }
+  },
+  {
+    "id": "mk-veh-01",
+    "type": "marker",
+    "titleZh": "猎豹经典版 · 固定免费刷新点",
+    "titleEn": "Grotti Cheetah Classic · Free Spawn",
+    "pinyin": "zeht lbjdb",
+    "category": "vehicle",
+    "region": "罪恶海滩",
+    "href": "/gta6/map?x=1290&y=440&marker=mk-veh-01",
+    "coords": {
+      "x": 1290,
+      "y": 440
+    }
+  },
+  {
+    "id": "mk-veh-02",
+    "type": "marker",
+    "titleZh": "女妖 GTS · 金融区展厅外坪",
+    "titleEn": "Bravado Banshee GTS · Showroom Lot",
+    "pinyin": "zeczx ny",
+    "category": "vehicle",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=720&y=210&marker=mk-veh-02",
+    "coords": {
+      "x": 720,
+      "y": 210
+    }
+  },
+  {
+    "id": "mk-veh-03",
+    "type": "marker",
+    "titleZh": "郁金香 M-100 · 港口老车修配厂",
+    "titleEn": "Declasse Tulip M-100 · Port Garage",
+    "pinyin": "geheg yjx",
+    "category": "vehicle",
+    "region": "盖尔霍恩港",
+    "href": "/gta6/map?x=-880&y=490&marker=mk-veh-03",
+    "coords": {
+      "x": -880,
+      "y": 490
+    }
+  },
+  {
+    "id": "mk-veh-04",
+    "type": "marker",
+    "titleZh": "湿地风暴气垫船 · 沼泽码头",
+    "titleEn": "Everglade Fanboat · Swamp Dock",
+    "pinyin": "zzsd qdc",
+    "category": "vehicle",
+    "region": "沼泽湿地",
+    "href": "/gta6/map?x=-540&y=-520&marker=mk-veh-04",
+    "coords": {
+      "x": -540,
+      "y": -520
+    }
+  },
+  {
+    "id": "mk-veh-05",
+    "type": "marker",
+    "titleZh": "海洋雀直升机 · 群岛水上机场",
+    "titleEn": "Sea Sparrow · Keys Seaplane Base",
+    "pinyin": "landqd hyq zsj",
+    "category": "vehicle",
+    "region": "雷奥奈达群岛",
+    "href": "/gta6/map?x=960&y=-1020&marker=mk-veh-05",
+    "coords": {
+      "x": 960,
+      "y": -1020
+    }
+  },
+  {
+    "id": "mk-veh-06",
+    "type": "marker",
+    "titleZh": "公爵黑曜版 · 安布罗西亚赛车场",
+    "titleEn": "Imponte Dukes Obsidian · Dirt Track",
+    "pinyin": "ablxy gj",
+    "category": "vehicle",
+    "region": "安布罗西亚",
+    "href": "/gta6/map?x=-160&y=720&marker=mk-veh-06",
+    "coords": {
+      "x": -160,
+      "y": 720
+    }
+  },
+  {
+    "id": "mk-heist-01",
+    "type": "marker",
+    "titleZh": "花园银行罪恶城旗舰金库",
+    "titleEn": "Maze Bank Vice City Vault",
+    "pinyin": "zeczx hyyh",
+    "category": "heist",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=610&y=85&marker=mk-heist-01",
+    "coords": {
+      "x": 610,
+      "y": 85
+    }
+  },
+  {
+    "id": "mk-heist-02",
+    "type": "marker",
+    "titleZh": "盖尔霍恩老字号高价当铺",
+    "titleEn": "Uncle Jack's Pawn & Gold",
+    "pinyin": "geheg dp",
+    "category": "heist",
+    "region": "盖尔霍恩港",
+    "href": "/gta6/map?x=-1120&y=380&marker=mk-heist-02",
+    "coords": {
+      "x": -1120,
+      "y": 380
+    }
+  },
+  {
+    "id": "mk-heist-03",
+    "type": "marker",
+    "titleZh": "运钞车高频巡逻路段 · 跨海高速",
+    "titleEn": "Gruppe Sechs Armored Convoy Route",
+    "pinyin": "zeht ycc",
+    "category": "heist",
+    "region": "罪恶海滩",
+    "href": "/gta6/map?x=1090&y=-310&marker=mk-heist-03",
+    "coords": {
+      "x": 1090,
+      "y": -310
+    }
+  },
+  {
+    "id": "mk-srv-01",
+    "type": "marker",
+    "titleZh": "黑市军火车 · 集装箱港区暗点",
+    "titleEn": "Black Market Gun Van · Container Yard",
+    "pinyin": "zeczx jhc",
+    "category": "service",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=420&y=-180&marker=mk-srv-01",
+    "coords": {
+      "x": 420,
+      "y": -180
+    }
+  },
+  {
+    "id": "mk-srv-02",
+    "type": "marker",
+    "titleZh": "黑市军火车 · 卡拉加林场补给点",
+    "titleEn": "Black Market Gun Van · Kalaga Timber Yard",
+    "pinyin": "kljsm klj jhc",
+    "category": "service",
+    "region": "卡拉加山脉",
+    "href": "/gta6/map?x=-180&y=1360&marker=mk-srv-02",
+    "coords": {
+      "x": -180,
+      "y": 1360
+    }
+  },
+  {
+    "id": "mk-srv-03",
+    "type": "marker",
+    "titleZh": "海洋景观安全屋（初始车库）",
+    "titleEn": "Ocean View Safehouse & Garage",
+    "pinyin": "zeht aqw",
+    "category": "service",
+    "region": "罪恶海滩",
+    "href": "/gta6/map?x=1350&y=110&marker=mk-srv-03",
+    "coords": {
+      "x": 1350,
+      "y": 110
+    }
+  },
+  {
+    "id": "mk-srv-04",
+    "type": "marker",
+    "titleZh": "霓虹改装工坊（Vice Customs）",
+    "titleEn": "Vice Customs · Neon Tuning",
+    "pinyin": "zeczx gz",
+    "category": "service",
+    "region": "罪恶城中心",
+    "href": "/gta6/map?x=810&y=410&marker=mk-srv-04",
+    "coords": {
+      "x": 810,
+      "y": 410
+    }
+  },
+  {
+    "id": "mk-srv-05",
+    "type": "marker",
+    "titleZh": "地下枪械库 · 港口废弃船坞",
+    "titleEn": "Dockside Armory · Port Gellhorn",
+    "pinyin": "geheg",
+    "category": "service",
+    "region": "盖尔霍恩港",
+    "href": "/gta6/map?x=-1240&y=760&marker=mk-srv-05",
+    "coords": {
+      "x": -1240,
+      "y": 760
+    }
+  },
+  {
+    "id": "mk-wild-01",
+    "type": "marker",
+    "titleZh": "巨型白化短吻鳄栖息滩",
+    "titleEn": "Albino Swamp Alligator Territory",
+    "pinyin": "zzsd dwe",
+    "category": "wildlife",
+    "region": "沼泽湿地",
+    "href": "/gta6/map?x=-920&y=-860&marker=mk-wild-01",
+    "coords": {
+      "x": -920,
+      "y": -860
+    }
+  },
+  {
+    "id": "mk-wild-02",
+    "type": "marker",
+    "titleZh": "霓虹粉火烈鸟浅滩",
+    "titleEn": "Flamingo Lagoon",
+    "pinyin": "landqd hln",
+    "category": "wildlife",
+    "region": "雷奥奈达群岛",
+    "href": "/gta6/map?x=1120&y=-1220&marker=mk-wild-02",
+    "coords": {
+      "x": 1120,
+      "y": -1220
+    }
+  },
+  {
+    "id": "mk-wild-03",
+    "type": "marker",
+    "titleZh": "雷奥奈达黑豹出没林区",
+    "titleEn": "Leonida Panther Ridge",
+    "pinyin": "kljsm klj hb",
+    "category": "wildlife",
+    "region": "卡拉加山脉",
+    "href": "/gta6/map?x=560&y=1410&marker=mk-wild-03",
+    "coords": {
+      "x": 560,
+      "y": 1410
+    }
+  },
+  {
+    "id": "veh-cheetah-classic",
+    "type": "vehicle",
+    "titleZh": "古罗帝 猎豹经典版",
+    "titleEn": "Grotti Cheetah Classic",
+    "pinyin": "lbjdb",
+    "category": "经典跑车",
+    "href": "/gta6/vehicles/grotti-cheetah-classic"
+  },
+  {
+    "id": "veh-banshee-gts",
+    "type": "vehicle",
+    "titleZh": "冒险家 女妖 GTS",
+    "titleEn": "Bravado Banshee GTS",
+    "pinyin": "ny",
+    "category": "超级跑车",
+    "href": "/gta6/vehicles/bravado-banshee-gts"
+  },
+  {
+    "id": "veh-tulip-m100",
+    "type": "vehicle",
+    "titleZh": "绝致 郁金香 M-100",
+    "titleEn": "Declasse Tulip M-100",
+    "pinyin": "yjx",
+    "category": "肌肉车",
+    "href": "/gta6/vehicles/declasse-tulip-m100"
+  },
+  {
+    "id": "veh-dukes-obsidian",
+    "type": "vehicle",
+    "titleZh": "英庞提 公爵黑曜版",
+    "titleEn": "Imponte Dukes Obsidian",
+    "pinyin": "gj",
+    "category": "肌肉车",
+    "href": "/gta6/vehicles/imponte-dukes-obsidian"
+  },
+  {
+    "id": "veh-everglade-fanboat",
+    "type": "vehicle",
+    "titleZh": "湿地风暴 气垫船",
+    "titleEn": "Everglade Fanboat",
+    "pinyin": "qdc",
+    "category": "船艇",
+    "href": "/gta6/vehicles/everglade-fanboat"
+  },
+  {
+    "id": "veh-sea-sparrow",
+    "type": "vehicle",
+    "titleZh": "海洋雀 水陆直升机",
+    "titleEn": "Sea Sparrow",
+    "pinyin": "hyq zsj",
+    "category": "航空器",
+    "href": "/gta6/vehicles/sea-sparrow"
+  },
+  {
+    "id": "veh-shinobi-neon",
+    "type": "vehicle",
+    "titleZh": "长崎 忍者霓虹版",
+    "titleEn": "Nagasaki Shinobi Neon",
+    "pinyin": "rz mt",
+    "category": "摩托车",
+    "href": "/gta6/vehicles/nagasaki-shinobi-neon"
+  },
+  {
+    "id": "veh-kalaga-4x4",
+    "type": "vehicle",
+    "titleZh": "威皮 卡拉加 TRX 越野",
+    "titleEn": "Vapid Kalaga TRX 4x4",
+    "pinyin": "klj",
+    "category": "越野车",
+    "href": "/gta6/vehicles/vapid-kalaga-trx"
+  },
+  {
+    "id": "wp-tactical-carbine",
+    "type": "weapon",
+    "titleZh": "战术卡宾步枪 Mk II",
+    "titleEn": "Tactical Carbine Mk II",
+    "pinyin": "zskb",
+    "category": "突击步枪",
+    "href": "/gta6/weapons/tactical-carbine-mk2"
+  },
+  {
+    "id": "wp-vice-smg",
+    "type": "weapon",
+    "titleZh": "罪恶紧凑冲锋枪",
+    "titleEn": "Vice Compact SMG",
+    "pinyin": "cfq",
+    "category": "冲锋枪",
+    "href": "/gta6/weapons/vice-compact-smg"
+  },
+  {
+    "id": "wp-heavy-sniper",
+    "type": "weapon",
+    "titleZh": "重型反器材狙击枪",
+    "titleEn": "Heavy Precision Sniper",
+    "pinyin": "jjq",
+    "category": "狙击枪",
+    "href": "/gta6/weapons/heavy-precision-sniper"
+  },
+  {
+    "id": "wp-neon-pistol",
+    "type": "weapon",
+    "titleZh": "罪恶 9mm 战术手枪",
+    "titleEn": "Vice 9mm Tactical Pistol",
+    "pinyin": "sq",
+    "category": "手枪",
+    "href": "/gta6/weapons/vice-9mm-tactical"
+  },
+  {
+    "id": "wp-swamp-shotgun",
+    "type": "weapon",
+    "titleZh": "清道夫战术连喷",
+    "titleEn": "Sweeper Tactical Shotgun",
+    "pinyin": "xdq",
+    "category": "霰弹枪",
+    "href": "/gta6/weapons/sweeper-tactical-shotgun"
+  },
+  {
+    "id": "wp-compact-launcher",
+    "type": "weapon",
+    "titleZh": "便携式 EMP 脉冲发射器",
+    "titleEn": "Compact EMP Launcher",
+    "pinyin": "",
+    "category": "重武器",
+    "href": "/gta6/weapons/compact-emp-launcher"
+  },
+  {
+    "id": "cheat-invincible",
+    "type": "cheat",
+    "titleZh": "5 分钟无敌模式",
+    "titleEn": "5-Minute Invincibility",
+    "pinyin": "wd",
+    "category": "角色状态",
+    "href": "/gta6/cheats#cheat-invincible"
+  },
+  {
+    "id": "cheat-max-health",
+    "type": "cheat",
+    "titleZh": "满生命值与满护甲",
+    "titleEn": "Max Health & Armor",
+    "pinyin": "sm",
+    "category": "角色状态",
+    "href": "/gta6/cheats#cheat-max-health"
+  },
+  {
+    "id": "cheat-lower-wanted",
+    "type": "cheat",
+    "titleZh": "降低通缉等级（-1 星）",
+    "titleEn": "Lower Wanted Level",
+    "pinyin": "tj",
+    "category": "通缉与战斗",
+    "href": "/gta6/cheats#cheat-lower-wanted"
+  },
+  {
+    "id": "cheat-raise-wanted",
+    "type": "cheat",
+    "titleZh": "提升通缉等级（+1 星）",
+    "titleEn": "Raise Wanted Level",
+    "pinyin": "tj",
+    "category": "通缉与战斗",
+    "href": "/gta6/cheats#cheat-raise-wanted"
+  },
+  {
+    "id": "cheat-all-weapons",
+    "type": "cheat",
+    "titleZh": "全套武器与弹药补给",
+    "titleEn": "Give Weapons & Extra Ammo",
+    "pinyin": "tj",
+    "category": "通缉与战斗",
+    "href": "/gta6/cheats#cheat-all-weapons"
+  },
+  {
+    "id": "cheat-spawn-super",
+    "type": "cheat",
+    "titleZh": "生成超跑（猎豹 / 彗星）",
+    "titleEn": "Spawn Sports Supercar",
+    "pinyin": "cp",
+    "category": "载具生成",
+    "href": "/gta6/cheats#cheat-spawn-super"
+  },
+  {
+    "id": "cheat-spawn-heli",
+    "type": "cheat",
+    "titleZh": "生成武装轻型直升机",
+    "titleEn": "Spawn Attack Chopper",
+    "pinyin": "zsj",
+    "category": "载具生成",
+    "href": "/gta6/cheats#cheat-spawn-heli"
+  },
+  {
+    "id": "cheat-spawn-moto",
+    "type": "cheat",
+    "titleZh": "生成特技仿赛摩托",
+    "titleEn": "Spawn Stunt Superbike",
+    "pinyin": "mt",
+    "category": "载具生成",
+    "href": "/gta6/cheats#cheat-spawn-moto"
+  },
+  {
+    "id": "cheat-weather",
+    "type": "cheat",
+    "titleZh": "切换雷奥奈达天气（晴/霓虹雨夜/飓风）",
+    "titleEn": "Cycle Leonida Weather",
+    "pinyin": "tq",
+    "category": "世界效果",
+    "href": "/gta6/cheats#cheat-weather"
+  },
+  {
+    "id": "cheat-moon-gravity",
+    "type": "cheat",
+    "titleZh": "低重力月球模式",
+    "titleEn": "Moon Gravity",
+    "pinyin": "",
+    "category": "世界效果",
+    "href": "/gta6/cheats#cheat-moon-gravity"
+  },
+  {
+    "id": "cheat-super-jump",
+    "type": "cheat",
+    "titleZh": "超级跳跃",
+    "titleEn": "Super Jump",
+    "pinyin": "",
+    "category": "角色状态",
+    "href": "/gta6/cheats#cheat-super-jump"
+  },
+  {
+    "id": "cheat-slow-aim",
+    "type": "cheat",
+    "titleZh": "慢动作精准瞄准（3 档）",
+    "titleEn": "Slow-Motion Aiming",
+    "pinyin": "",
+    "category": "世界效果",
+    "href": "/gta6/cheats#cheat-slow-aim"
+  },
+  {
+    "id": "guide-leonida-heist-optimal-crew",
+    "type": "guide",
+    "titleZh": "花园银行旗舰金库最优分工与零警报潜行路线",
+    "titleEn": "Maze Bank Vice Vault: Optimal Crew & Silent Route",
+    "pinyin": "hyyh qj",
+    "category": "抢劫攻略",
+    "href": "/gta6/guides#leonida-heist-optimal-crew"
+  },
+  {
+    "id": "guide-vice-city-anti-theft-system",
+    "type": "guide",
+    "titleZh": "载具防盗等级（1–5 级）机制与信号干扰器获取指南",
+    "titleEn": "Vehicle Anti-Theft Tier 1-5 & Signal Jammer Guide",
+    "pinyin": "fd",
+    "category": "机制解析",
+    "href": "/gta6/guides#vice-city-anti-theft-system"
+  },
+  {
+    "id": "guide-leonida-story-branches",
+    "type": "guide",
+    "titleZh": "双主角信任度系统与关键剧情分支剧透预警",
+    "titleEn": "Dual-Protagonist Trust System & Story Branches",
+    "pinyin": "jq",
+    "category": "剧情分支",
+    "href": "/gta6/guides#leonida-story-branches"
+  },
+  {
+    "id": "guide-vice-city-classic-easter-eggs",
+    "type": "guide",
+    "titleZh": "致敬《罪恶都市》的 8 大霓虹彩蛋坐标汇总",
+    "titleEn": "8 Classic Vice City Easter Eggs in Leonida",
+    "pinyin": "cd",
+    "category": "彩蛋揭秘",
+    "href": "/gta6/guides#vice-city-classic-easter-eggs"
+  }
+]

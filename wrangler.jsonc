@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gta8-cc",
+  "main": "custom-worker.ts",
+  "compatibility_date": "2026-11-26",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["0 */6 * * *"]
+  },
+  "routes": [
+    {
+      "pattern": "gta8.cc",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.gta8.cc",
+      "custom_domain": true
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gta8-db",
+      "database_id": "dc889edb-b3d6-44ef-8570-6d4a0d7548d3",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://gta8.cc",
+    "NEXT_PUBLIC_TILES_BASE_URL": ""
+  }
+}

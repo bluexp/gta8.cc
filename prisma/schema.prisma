@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 1. 地图标记点（核心表）
+model MapMarker {
+  id             String   @id @default(cuid())
+  gameVersion    String   @default("gta6") // 预留 gta5 / gta_online 扩展
+  category       String   // collectible | vehicle | heist | service | wildlife
+  subType        String   // waink_scan | stunt_jump | supercar | bank 等
+  titleZh        String
+  titleEn        String
+  region         String?  // 所属区域（如 Vice Beach）
+  x              Float    // 平面投影 X 坐标
+  y              Float    // 平面投影 Y 坐标
+  descriptionMd  String?  // 获取条件与攻略说明
+  mediaUrls      String   @default("[]") // JSON 数组：实机截图 URL
+  linkedEntityId String?  // 关联的载具/武器词条 slug
+  contributor    String?  // 社区贡献者署名
+  isVerified     Boolean  @default(true)
+  createdAt      DateTime @default(now())
+
+  @@index([gameVersion, category])
+}
+
+// 2. 图鉴词条（载具 / 武器 / 收藏品通用多态结构）
+model WikiEntity {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  gameVersion String   @default("gta6")
+  entityType  String   // vehicle | weapon | collectible
+  category    String   // 跑车 / 突击步枪 / 扫描点 等
+  titleZh     String
+  titleEn     String
+  coverImage  String?
+  statsJson   String   @default("{}") // 差异化属性（极速、操控、伤害、价格等）
+  contentMd   String?  // 详细图鉴与获取指南
+  createdAt   DateTime @default(now())
+}
+
+// 3. 用户收集进度（支持账号云端同步）
+model UserProgress {
+  userId           String   @id
+  completedMarkers String   @default("[]") // JSON 数组：已勾选 markerId 列表
+  updatedAt        DateTime @updatedAt
+}
+
+// 4. 社区投稿与纠错队列
+model MarkerSubmission {
+  id          String   @id @default(cuid())
+  markerId    String?  // 为空代表新增点位，非空代表现有坐标纠错
+  payloadJson String   // 提交的标题、坐标、描述与截图链接
+  nickname    String?
+  status      String   @default("pending") // pending | approved | rejected
+  createdAt   DateTime @default(now())
+}
