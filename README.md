@@ -33,6 +33,10 @@ Defaults to **English (`EN`)** with instant one-click switching to **Simplified 
   - Visual DualSense (`△ ○ × □ L1 R1 L2 R2`) and Xbox controller icons plus in-game phone dial numbers with instant copy.
 - **Guides & Interactive Heist Payout Calculator (`/gta6/guides`)**
   - Real-time net player payout calculator after NPC crew cuts, fencing fees, gunfire damage loss, and setup costs.
+- **9:16 Mobile Wallpapers (`/gta6/wallpapers`)**
+  - Original Leonida & Vice City vertical HD phone wallpapers with an interactive iPhone/Android lock-screen clock preview and watermark-free download.
+- **Xiaohongshu Mini-Tool (`xhs-minitool/`)**
+  - Standalone, zero-network, CSP & Chrome 61 compliant offline Red App bundle (`node xhs-minitool/build-zip.mjs`) with native `window.xhs.miniTool` storage, album save, and card sharing.
 - **Admin Ops & UGC Review Console (`/admin`)**
   - Protected by Cloudflare Worker secret `ADMIN_TOKEN`; trigger full multi-source syncs on demand and approve/reject community map pins directly into live D1.
 

@@ -25,3 +25,4 @@ next-env.d.ts
 # generated tiles & release zips
 /tiles-output/
 /xhs-minitool/release/*.zip
+/xhs-minitool/release/gta8-xhs-minitool-v*/

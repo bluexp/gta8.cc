@@ -2,6 +2,16 @@
 
 All notable changes to **GTA8.cc** are documented in this file.
 
+## [1.1.0] - 2026-11-26
+
+### Added
+- **9:16 Mobile Wallpapers (`/gta6/wallpapers`)**: Launched Vol. 1 vertical HD Leonida & Vice City mobile wallpapers with an interactive lock-screen clock preview modal and watermark-free HD download.
+- **Xiaohongshu Mini-Tool (`xhs-minitool/`)**: Added standalone offline, CSP-safe, Chrome 61 compatible Red App source, native `window.xhs.miniTool` SDK integration (safe area, storage, album save, share), validator/packager (`build-zip.mjs`), 1:1 icon, 3:4 cover, and release guide.
+- **Full Open-Source Community Governance**: Added `CODE_OF_CONDUCT.md`, `SECURITY.md`, GitHub Issue/PR templates, `wrangler.example.jsonc`, and homepage/navbar/footer GitHub open-source links; hardened `/api/admin/*` to fail closed when `ADMIN_TOKEN` is unset.
+
+### Changed
+- Decluttered the desktop navigation bar by grouping encyclopedias under a clean **Wiki** dropdown and preventing language pill line-wrapping.
+
 ## [1.0.0] - 2026-11-26
 
 ### Added
