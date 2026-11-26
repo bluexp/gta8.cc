@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/gta6/map",
     "/gta6/intel",
+    "/gta6/wallpapers",
     "/gta6/checklist",
     "/gta6/vehicles",
     "/gta6/weapons",

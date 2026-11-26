@@ -76,6 +76,11 @@ export function Footer() {
                   {t("Heist Calculator & Guides", "抢劫收益速算器与攻略专栏")}
                 </Link>
               </li>
+              <li>
+                <Link href="/gta6/wallpapers" className="hover:text-[#FF2E93]">
+                  {t("9:16 Mobile Wallpapers", "GTA 6 高清手机壁纸库")}
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -17,11 +17,13 @@ import {
   Github,
   GitPullRequest,
   Scale,
+  Smartphone,
 } from "lucide-react";
 import { GlobalSearch } from "@/components/GlobalSearch";
 import { HomeProgressOverview } from "@/components/HomeProgressOverview";
 import { VEHICLES } from "@/data/vehicles";
 import { MAP_MARKERS } from "@/data/markers";
+import { WALLPAPERS } from "@/data/wallpapers";
 import { formatMoney } from "@/lib/utils";
 import { useLocale } from "@/store/useLocaleStore";
 
@@ -129,6 +131,19 @@ const TOOLS_MATRIX = [
     zhBadge: "交互计算器",
     accent: "#22C55E",
     icon: Calculator,
+  },
+  {
+    href: "/gta6/wallpapers",
+    enTitle: "Mobile Wallpapers (9:16)",
+    zhTitle: "GTA 6 手机高清壁纸",
+    subtitleEn: "Lock-Screen Preview",
+    subtitleZh: "9:16 Mobile HD",
+    enDesc: "Original Vice City & Leonida neon vertical wallpapers with live phone lock-screen preview & free HD download.",
+    zhDesc: "原创雷奥奈达与罪恶海滩 9:16 竖屏高清壁纸，支持锁屏时钟实时预览与无水印下载。",
+    enBadge: "New · HD",
+    zhBadge: "上新 · 高清",
+    accent: "#FF2E93",
+    icon: Smartphone,
   },
 ];
 
@@ -312,7 +327,7 @@ export function HomeClient() {
             </p>
           </div>
 
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {TOOLS_MATRIX.map((tool) => {
               const Icon = tool.icon;
               return (
@@ -445,6 +460,53 @@ export function HomeClient() {
                 "社区众包纠错已接入 Cloudflare D1 与 Turnstile 防刷保护，欢迎在地图右侧抽屉补充新点位。"
               )}
             </div>
+          </div>
+        </section>
+
+        {/* Mobile Wallpapers Showcase Strip */}
+        <section className="mt-12 rounded-2xl border border-white/10 bg-[#161922] p-5 sm:p-6">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#FF2E93]">
+                <Smartphone className="h-3.5 w-3.5" />
+                {t("9:16 Mobile Lock-Screen Pack", "9:16 竖屏高清手机壁纸")}
+              </span>
+              <h2 className="mt-1 text-lg font-extrabold text-white sm:text-xl">
+                {t("Leonida & Vice City Phone Wallpapers", "GTA 6 雷奥奈达主题手机壁纸")}
+              </h2>
+            </div>
+            <Link
+              href="/gta6/wallpapers"
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#00E5FF] hover:underline"
+            >
+              {t(`Browse All ${WALLPAPERS.length} HD Wallpapers →`, `浏览全部 ${WALLPAPERS.length} 张高清壁纸 →`)}
+            </Link>
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {WALLPAPERS.map((wp) => (
+              <Link
+                key={wp.id}
+                href={`/gta6/wallpapers#${wp.slug}`}
+                className="group relative aspect-[9/14] overflow-hidden rounded-2xl border border-white/10 bg-[#0D0F14] transition hover:-translate-y-1 hover:border-[#FF2E93]/60"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={wp.imageSrc}
+                  alt={isEn ? wp.titleEn : wp.titleZh}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent p-3.5 pt-10">
+                  <div className="text-xs font-bold text-white sm:text-sm">
+                    {isEn ? wp.titleEn : wp.titleZh}
+                  </div>
+                  <div className="mt-0.5 font-mono text-[10px] text-[#00E5FF]">
+                    {wp.aspectRatio} · {isEn ? wp.regionEn : wp.regionZh}
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
