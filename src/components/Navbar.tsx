@@ -13,6 +13,7 @@ import {
   BookOpen,
   Radio,
   Globe,
+  Github,
   Menu,
   X,
 } from "lucide-react";
@@ -122,6 +123,18 @@ export function Navbar() {
               中文
             </button>
           </div>
+
+          {/* Open-Source GitHub Link */}
+          <a
+            href="https://github.com/bluexp/gta8.cc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 items-center gap-1.5 rounded-full border border-white/15 bg-[#161922] px-2.5 text-[11px] font-semibold text-zinc-200 transition hover:border-[#00E5FF]/60 hover:text-[#00E5FF]"
+            title={t("Open Source on GitHub (MIT)", "GitHub 开源仓库 (MIT)")}
+          >
+            <Github className="h-3.5 w-3.5" />
+            <span className="hidden xl:inline">GitHub</span>
+          </a>
 
           <Link
             href="/gta6/checklist"

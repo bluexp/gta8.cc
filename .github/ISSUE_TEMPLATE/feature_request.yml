@@ -1,0 +1,17 @@
+name: Feature Request
+description: Propose a new tool, map layer, encyclopedia filter, or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Idea
+      description: What would make GTA8.cc more useful for GTA 6 players?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      placeholder: Describe the UI, route, or data structure you have in mind.

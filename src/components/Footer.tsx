@@ -29,14 +29,19 @@ export function Footer() {
               )}
             </p>
             <div className="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <a
+                href="https://github.com/bluexp/gta8.cc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-[#00E5FF]/40 bg-[#00E5FF]/10 px-2.5 py-1 font-semibold text-[#00E5FF] transition hover:bg-[#00E5FF]/20"
+              >
+                {t("Open Source · MIT License (GitHub)", "完全开源 · MIT 协议 (GitHub)")}
+              </a>
               <span className="rounded-full border border-white/10 bg-[#161922] px-2.5 py-1 text-zinc-300">
                 {t("Cloudflare Workers Edge", "Cloudflare Workers 边缘加速")}
               </span>
               <span className="rounded-full border border-white/10 bg-[#161922] px-2.5 py-1 text-zinc-300">
                 {t("Cloudflare D1 Live Sync", "Cloudflare D1 实时同步")}
-              </span>
-              <span className="rounded-full border border-white/10 bg-[#161922] px-2.5 py-1 text-zinc-300">
-                {t("Dark Neon Eye-Care Mode", "暗黑霓虹护眼模式")}
               </span>
             </div>
           </div>
@@ -98,6 +103,26 @@ export function Footer() {
                 <Link href="/sitemap.xml" className="hover:text-[#FF2E93]">
                   {t("XML Sitemap", "Sitemap 索引地图")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/bluexp/gta8.cc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00E5FF]"
+                >
+                  {t("GitHub Repository (MIT)", "GitHub 源码仓库 (MIT)")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/bluexp/gta8.cc/blob/main/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00E5FF]"
+                >
+                  {t("Contributing & Self-Hosting", "参与贡献与自部署指南")}
+                </a>
               </li>
             </ul>
           </div>

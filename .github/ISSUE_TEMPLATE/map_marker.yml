@@ -1,0 +1,43 @@
+name: Map Marker / Coordinate Submission
+description: Submit a new Leonida map pin or coordinate correction
+title: "[Map Pin]: "
+labels: ["map-data"]
+body:
+  - type: input
+    id: title_en
+    attributes:
+      label: Marker Title (English)
+      placeholder: e.g. WAiNK Scan #05 · Vice Beach Pier
+    validations:
+      required: true
+  - type: input
+    id: title_zh
+    attributes:
+      label: Marker Title (中文, optional)
+      placeholder: 例如：WAiNK 扫描点 #05 · 罪恶海滩栈桥
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - collectible
+        - vehicle
+        - heist
+        - service
+        - wildlife
+    validations:
+      required: true
+  - type: input
+    id: coords
+    attributes:
+      label: Coordinates (X, Y)
+      placeholder: "X: 1240, Y: -850"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Acquisition Notes / Screenshot Links
+      placeholder: Describe how to reach or trigger this marker...
+    validations:
+      required: true

@@ -47,7 +47,11 @@ export async function getDB(): Promise<D1DatabaseLike | null> {
 
 export async function verifyAdminAuth(request: Request): Promise<boolean> {
   const env = await getWorkerEnv();
-  const expected = env.ADMIN_TOKEN || process.env.ADMIN_TOKEN || "gta8-admin";
+  const expected = (env.ADMIN_TOKEN || process.env.ADMIN_TOKEN || "").trim();
+  if (!expected) {
+    // Fail closed when ADMIN_TOKEN secret is not configured
+    return false;
+  }
   const provided =
     request.headers.get("x-admin-token") ||
     request.headers.get("authorization")?.replace(/^Bearer\s+/i, "") ||

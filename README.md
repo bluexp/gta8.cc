@@ -1,8 +1,13 @@
 # GTA8.cc · GTA 6 Interactive Leonida Map & Complete Wiki
 
-> **Live Site:** [https://gta8.cc](https://gta8.cc) | **中文文档:** [README.zh-CN.md](./README.zh-CN.md)
+[![Live Site](https://img.shields.io/badge/Live-gta8.cc-FF2E93?style=flat-square)](https://gta8.cc)
+[![License: MIT](https://img.shields.io/badge/License-MIT-00E5FF?style=flat-square)](./LICENSE)
+[![CI](https://github.com/bluexp/gta8.cc/actions/workflows/ci.yml/badge.svg)](https://github.com/bluexp/gta8.cc/actions/workflows/ci.yml)
+[![Cloudflare Workers](https://img.shields.io/badge/Edge-Cloudflare%20Workers%20%2B%20D1-F38020?style=flat-square)](https://workers.cloudflare.com)
 
-**GTA8.cc** is an all-in-one, dark-neon **Tool + Wiki** web application for *Grand Theft Auto VI* (Leonida), built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS**, **Leaflet (`CRS.Simple`)**, **Fuse.js**, **Zustand**, and deployed globally on **Cloudflare Workers + D1 + Cron Triggers**.
+> **Live Site:** [https://gta8.cc](https://gta8.cc) | **GitHub:** [bluexp/gta8.cc](https://github.com/bluexp/gta8.cc) | **中文文档:** [README.zh-CN.md](./README.zh-CN.md)
+
+**GTA8.cc** is a **100% open-source (MIT)**, dark-neon **Tool + Wiki** web application for *Grand Theft Auto VI* (Leonida), built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS**, **Leaflet (`CRS.Simple`)**, **Fuse.js**, **Zustand**, and deployed globally on **Cloudflare Workers + D1 + Cron Triggers**.
 
 Defaults to **English (`EN`)** with instant one-click switching to **Simplified Chinese (`中文`)** across every page, map tooltip, encyclopedia card, and admin screen.
 
@@ -140,6 +145,9 @@ npm run cf:deploy
 - **[docs/API.md](./docs/API.md)** — Complete REST API reference for markers, progress, submissions, intel, and admin routes
 - **[docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)** — Cloudflare Free Tier setup, D1 migrations, secrets, DNS, and R2 map tile slicing
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** — How to contribute coordinates, wiki data, translations, or code
+- **[SECURITY.md](./SECURITY.md)** — Vulnerability reporting & deployment hardening
+- **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** — Community standards
+- **[wrangler.example.jsonc](./wrangler.example.jsonc)** — Clean Cloudflare template for self-hosting forks
 - **[CHANGELOG.md](./CHANGELOG.md)** — Version history
 - **[README.zh-CN.md](./README.zh-CN.md)** — 简体中文项目文档
 

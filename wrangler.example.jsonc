@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gta8-cc",
+  "main": "custom-worker.ts",
+  "compatibility_date": "2026-11-26",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["0 */6 * * *"]
+  },
+  // Replace with your own domain or remove `routes` to use *.workers.dev
+  "routes": [
+    {
+      "pattern": "example.com",
+      "custom_domain": true
+    }
+  ],
+  // Create via `npx wrangler d1 create gta8-db` and paste your database_id
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gta8-db",
+      "database_id": "<YOUR_CLOUDFLARE_D1_DATABASE_ID>",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://example.com",
+    "NEXT_PUBLIC_TILES_BASE_URL": ""
+  }
+}

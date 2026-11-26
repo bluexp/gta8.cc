@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report a bug on gta8.cc or in the codebase
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly (English or 中文).
+      placeholder: Expected vs actual behavior...
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page URL / Route
+      placeholder: https://gta8.cc/gta6/map
+  - type: dropdown
+    id: language
+    attributes:
+      label: Active UI Language
+      options:
+        - English (EN)
+        - Chinese (中文)
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click '...'
+        3. Observe error

@@ -1,8 +1,12 @@
 # GTA8.cc · GTA 6 雷奥奈达交互地图与全图鉴
 
-> **线上访问：** [https://gta8.cc](https://gta8.cc) | **English README:** [README.md](./README.md)
+[![Live Site](https://img.shields.io/badge/Live-gta8.cc-FF2E93?style=flat-square)](https://gta8.cc)
+[![License: MIT](https://img.shields.io/badge/License-MIT-00E5FF?style=flat-square)](./LICENSE)
+[![CI](https://github.com/bluexp/gta8.cc/actions/workflows/ci.yml/badge.svg)](https://github.com/bluexp/gta8.cc/actions/workflows/ci.yml)
 
-**GTA8.cc** 是一套面向全球与中文玩家的《GTA 6》一站式实用工具站与全收集数据库（Tool + Wiki），采用暗黑霓虹视觉体系（`#0D0F14` / `#161922` / `#FF2E93` / `#00E5FF`），基于 **Next.js 16 (App Router) + TypeScript + Tailwind CSS + Leaflet (`CRS.Simple`) + Fuse.js + Zustand** 构建，并完整部署于 **Cloudflare Workers + D1 + Cron Triggers** 边缘架构（起步阶段完全运行在 Cloudflare 免费套餐内）。
+> **线上访问：** [https://gta8.cc](https://gta8.cc) | **GitHub 开源仓库：** [bluexp/gta8.cc](https://github.com/bluexp/gta8.cc) | **English README:** [README.md](./README.md)
+
+**GTA8.cc** 是一套 **100% 完全开源（MIT 协议）** 的《GTA 6》一站式实用工具站与全收集数据库（Tool + Wiki），采用暗黑霓虹视觉体系（`#0D0F14` / `#161922` / `#FF2E93` / `#00E5FF`），基于 **Next.js 16 (App Router) + TypeScript + Tailwind CSS + Leaflet (`CRS.Simple`) + Fuse.js + Zustand** 构建，并完整部署于 **Cloudflare Workers + D1 + Cron Triggers** 边缘架构（起步阶段完全运行在 Cloudflare 免费套餐内）。自部署可直接复制 [wrangler.example.jsonc](./wrangler.example.jsonc) 填入自己的 D1 ID 与域名。
 
 全站**默认显示英文版（`EN`）**，右上角提供一键无刷新切换 **简体中文（`中文`）**，自动持久化至浏览器本地。
 

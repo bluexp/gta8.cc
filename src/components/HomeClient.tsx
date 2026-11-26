@@ -14,6 +14,9 @@ import {
   Compass,
   Zap,
   ShieldCheck,
+  Github,
+  GitPullRequest,
+  Scale,
 } from "lucide-react";
 import { GlobalSearch } from "@/components/GlobalSearch";
 import { HomeProgressOverview } from "@/components/HomeProgressOverview";
@@ -441,6 +444,60 @@ export function HomeClient() {
                 "Community coordinate corrections are stored in Cloudflare D1 & protected by Turnstile.",
                 "社区众包纠错已接入 Cloudflare D1 与 Turnstile 防刷保护，欢迎在地图右侧抽屉补充新点位。"
               )}
+            </div>
+          </div>
+        </section>
+
+        {/* Open-Source Community Showcase */}
+        <section className="mt-12 overflow-hidden rounded-2xl border border-[#00E5FF]/30 bg-gradient-to-br from-[#161922] via-[#131826] to-[#1A1322] p-6 sm:p-8">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#00E5FF]/40 bg-[#00E5FF]/15 px-3 py-1 text-xs font-bold text-[#00E5FF]">
+                  <Github className="h-3.5 w-3.5" />
+                  {t("100% Open Source", "100% 完全开源")}
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[11px] font-semibold text-zinc-300">
+                  <Scale className="h-3 w-3 text-[#FF2E93]" /> MIT License
+                </span>
+                <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-300">
+                  {t("Self-Hostable on Cloudflare Free Tier", "支持 Cloudflare 免费套餐一键自部署")}
+                </span>
+              </div>
+
+              <h2 className="mt-3 text-xl font-black text-white sm:text-2xl">
+                {t(
+                  "Built in the Open for the Global GTA Community",
+                  "完全开源 · 与全球 GTA 玩家共建雷奥奈达数据库"
+                )}
+              </h2>
+              <p className="mt-2 text-xs leading-relaxed text-zinc-300 sm:text-sm">
+                {t(
+                  "All frontend code, Leaflet map engine, D1 database migrations, 6-hour Cloudflare Cron sync worker, and pyvips tile-slicing scripts are open-sourced under the MIT License on GitHub. Star the repo, submit map coordinates, or fork and deploy your own instance.",
+                  "本项目全部前端页面、Leaflet 平面地图引擎、Cloudflare D1 建表迁移、每 6 小时自动同步 Cron Worker 以及 pyvips 瓦片切图脚本均已以 MIT 协议完全开源在 GitHub。欢迎 Star、提交坐标 PR 或 Fork 自部署。"
+                )}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 lg:shrink-0">
+              <a
+                href="https://github.com/bluexp/gta8.cc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neon-cyan-glow inline-flex items-center gap-2 rounded-xl bg-[#00E5FF] px-5 py-3 text-xs font-extrabold text-[#0D0F14] transition hover:opacity-90 sm:text-sm"
+              >
+                <Github className="h-4 w-4" />
+                {t("Star on GitHub", "GitHub 开源仓库")}
+              </a>
+              <a
+                href="https://github.com/bluexp/gta8.cc/issues/new/choose"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#FF2E93]/45 bg-[#FF2E93]/15 px-4 py-3 text-xs font-bold text-[#FF2E93] transition hover:bg-[#FF2E93] hover:text-white sm:text-sm"
+              >
+                <GitPullRequest className="h-4 w-4" />
+                {t("Contribute Pins / PR", "提交点位 / 参与共建")}
+              </a>
             </div>
           </div>
         </section>
